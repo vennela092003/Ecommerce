@@ -1,0 +1,11 @@
+.btn{
+    display: block;
+    width: 50;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    background-color: red;
+    columns: blue;
+    text-align: center;
+}

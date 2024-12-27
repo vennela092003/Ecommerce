@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <table border="1">
+        <thead>
+          <tr>
+            <th scope="col">image</th>
+            <th scope="col">name</th>
+            <th scope="col">category</th>
+            <th scope="col">price</th>
+            <th scope="col">quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+    
+          </tr>
+        </thead>
+        <tbody>
+            {% for key,value in items.items() %}
+            <tr>
+                <td><img height="100" weight="100" src="{{url_for('static',filename=value[3])}}" alt="{{value[0]}}"></td>
+                <td>{{value[0]}}</td>
+                <td>{{value[4]}}</td>
+                <td>{{value[1]}}</td>
+                <td>{{value[2]}}</td>
+                <td>{{value[1] | int *value[2]}}</td>
+                <td><a href="{{url_for('cartpop',itemid=key)}}"><button>Remove</button></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+        
+
+
+   
+</body>
+</html>

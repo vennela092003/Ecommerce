@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>OID</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+        {% for i in data %}
+        <td>{{i[0]}}</td>
+        <td>{{i[2]}}</td>
+        <td>{{i[3]}}</td>
+        <td>{{i[4]}}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>
